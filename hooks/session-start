@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# SessionStart hook for decentpowers — injects the using-decentpowers bootstrap.
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+content=$(cat "${PLUGIN_ROOT}/skills/using-decentpowers/SKILL.md" 2>&1 || echo "Error reading using-decentpowers skill")
+
+escape_for_json() {
+    local s="$1"
+    s="${s//\\/\\\\}"
+    s="${s//\"/\\\"}"
+    s="${s//$'\n'/\\n}"
+    s="${s//$'\r'/\\r}"
+    s="${s//$'\t'/\\t}"
+    printf '%s' "$s"
+}
+
+escaped=$(escape_for_json "$content")
+ctx="<EXTREMELY_IMPORTANT>\nYou have decentpowers.\n\n**Below is your 'using-decentpowers' skill — your guide to the workflow. For all other skills, use the Skill tool:**\n\n${escaped}\n</EXTREMELY_IMPORTANT>"
+
+printf '{\n  "hookSpecificOutput": {\n    "hookEventName": "SessionStart",\n    "additionalContext": "%s"\n  }\n}\n' "$ctx"
+exit 0
