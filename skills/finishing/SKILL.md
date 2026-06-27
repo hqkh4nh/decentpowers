@@ -1,6 +1,6 @@
 ---
 name: finishing
-description: Use when implementation is complete and verified, to integrate the work — merge, PR, or cleanup — after a final evidence check.
+description: Use when implementation is complete and verified, to integrate the work - merge, PR, or cleanup - after a final evidence check.
 ---
 
 # Finishing a Development Branch
@@ -11,7 +11,7 @@ Verify once more, detect the workspace, present clear options, execute the choic
 
 ## 1. Final verification
 
-Run the project's tests one more time. If anything fails, stop — show the failures and fix before integrating. Do not merge or open a PR on red.
+Run the project's tests one more time. If anything fails, stop - show the failures and fix before integrating. Do not merge or open a PR on red.
 
 ## 2. Detect the workspace
 
@@ -28,7 +28,7 @@ GIT_COMMON=$(cd "$(git rev-parse --git-common-dir)" 2>/dev/null && pwd -P)
 git merge-base HEAD main 2>/dev/null || git merge-base HEAD master 2>/dev/null
 ```
 
-Or ask: "This branch split from main — correct?"
+Or ask: "This branch split from main - correct?"
 
 ## 4. Present options
 
@@ -43,12 +43,12 @@ Implementation complete. What would you like to do?
 Which option?
 ```
 
-Keep it to these four — no extra explanation.
+Keep it to these four - no extra explanation.
 
 ## 5. Execute
 
 - **Merge locally:** `cd` to the main repo root, `git checkout <base> && git pull && git merge <branch>`, re-run tests on the merged result, then (if you own the worktree) remove it and `git branch -d <branch>`.
-- **PR:** `git push -u origin <branch>` and open the PR. Keep the worktree — it is needed for review iteration.
+- **PR:** `git push -u origin <branch>` and open the PR. Keep the worktree - it is needed for review iteration.
 - **Keep as-is:** report the branch and worktree path. Leave both.
 - **Discard:** show exactly what will be deleted (branch, commits, worktree) and require a typed `discard`. Then `cd` to main root, remove the worktree if you own it, `git branch -D <branch>`.
 

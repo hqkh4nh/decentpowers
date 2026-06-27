@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "decentpowers",
-      "description": "Lean, post-hype workflow skills for Claude Code.",
+      "description": "Lean, pragmatic workflow skills for Claude Code.",
       "version": "0.1.0",
       "source": "./",
       "author": {

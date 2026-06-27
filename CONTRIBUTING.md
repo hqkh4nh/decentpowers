@@ -9,7 +9,7 @@ Each skill is a directory under `skills/<name>/` with a `SKILL.md`:
 ```markdown
 ---
 name: <kebab-case, matches the directory>
-description: <one line — when to use this skill; this is what triggers it>
+description: <one line - when to use this skill; this is what triggers it>
 ---
 
 # <Title>
@@ -21,7 +21,7 @@ Bundled references (templates, longer guides) live beside `SKILL.md` and are lin
 
 ## Voice
 
-Write principles, not mechanical checklists. State the few hard gates plainly — the design-approval gate, the evidence-before-done gate — and leave the rest to judgment. Prefer "show the evidence" over "always/never" lists. No generic filler.
+Write principles, not mechanical checklists. State the few hard gates plainly - the design-approval gate, the evidence-before-done gate - and leave the rest to judgment. Prefer "show the evidence" over "always/never" lists. No generic filler.
 
 ## Before you ship a change
 

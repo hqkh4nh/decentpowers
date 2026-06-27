@@ -1,6 +1,6 @@
 {
   "name": "decentpowers",
-  "description": "Lean, post-hype workflow skills for Claude Code: brainstorm to an approved design, one detailed spec, single-agent build, deterministic verify.",
+  "description": "Lean, pragmatic workflow skills for Claude Code: brainstorm to an approved design, one detailed spec, single-agent build, deterministic verify.",
   "version": "0.1.0",
   "author": {
     "name": "Huỳnh Quốc Khánh",

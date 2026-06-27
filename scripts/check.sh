@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# decentpowers structural gate — deterministic checks for the plugin's own ACs.
+# decentpowers structural gate - deterministic checks for the plugin's own ACs.
 set -uo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
