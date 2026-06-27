@@ -30,7 +30,7 @@ brainstorming → writing-spec → implementing → verifying → finishing
 ## Install
 
 ```
-/plugin marketplace add <this-repo>
+/plugin marketplace add hqkh4nh/decentpowers
 /plugin install decentpowers
 ```
 
