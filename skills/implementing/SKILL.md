@@ -29,7 +29,7 @@ Do not move to the next task while tests or the verify command are red.
 
 ## Commit per acceptance criterion
 
-When every task that `Verifies` an AC is done and the AC is green, make **one commit for that AC**, message referencing it (e.g. `feat: AC-2 filter tasks by status`). Group all of the AC's tasks - tests and implementation together - into that single commit; do not commit each task. A large feature then lands in a handful of atomic, traceable commits instead of dozens.
+When every task that `Verifies` an AC is done and the AC is green, make **one commit for that AC**, its message describing the change itself (e.g. `feat: filter tasks by status`). Do not put the AC id in the message - the spec may be kept local, so `AC-2` means nothing to someone reading the repo. Group all of the AC's tasks - tests and implementation together - into that single commit; do not commit each task. A large feature then lands in a handful of atomic, traceable commits instead of dozens.
 
 Between tasks inside one AC, code sits uncommitted in the working tree - after a compaction, the ledger's task ticks plus `git status` tell you where to resume. Record the commit in the ledger per AC: `AC-2: done (commit <sha7>)`.
 
