@@ -47,6 +47,8 @@ Keep it to these four - no extra explanation.
 
 ## 5. Execute
 
+Branch history is already clean - one commit per acceptance criterion - so keep those commits by default. Only squash the branch into a single commit if the user asks for it (`git merge --squash <branch>`, then one commit).
+
 - **Merge locally:** `cd` to the main repo root, `git checkout <base> && git pull && git merge <branch>`, re-run tests on the merged result, then (if you own the worktree) remove it and `git branch -d <branch>`.
 - **PR:** `git push -u origin <branch>` and open the PR. Keep the worktree - it is needed for review iteration.
 - **Keep as-is:** report the branch and worktree path. Leave both.
