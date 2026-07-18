@@ -23,7 +23,7 @@ Create a todo per item; complete in order:
 2. **Ask clarifying questions** - one at a time; multiple-choice when you can. Purpose, constraints, success criteria.
 3. **Propose 2-3 approaches** - trade-offs, lead with your recommendation.
 4. **Present the design in sections** - scaled to complexity; get approval after each.
-5. **Write the spec's upper layers** - to `docs/specs/YYYY-MM-DD-<topic>.md`, then commit.
+5. **Write the spec's upper layers** - to `docs/specs/YYYY-MM-DD-<topic>.md`, then commit it (guarded - see Committing the spec).
 6. **Self-review** - placeholders, contradictions, scope, ambiguity. Fix inline.
 7. **User reviews the spec** - wait for approval.
 8. **Hand off to writing-spec** - to add tasks and verification.
@@ -81,10 +81,17 @@ Explore the structure and follow existing patterns before proposing changes. Whe
 
 ## After approval
 
-- Write the design's upper layers (summary, acceptance criteria, scope, design notes, open questions) to `docs/specs/YYYY-MM-DD-<topic>.md` using the format in `writing-spec`'s `spec-template.md`. Commit it.
+- Write the design's upper layers (summary, acceptance criteria, scope, design notes, open questions) to `docs/specs/YYYY-MM-DD-<topic>.md` using the format in `writing-spec`'s `spec-template.md`. Then commit it following **Committing the spec** below.
 - Self-review with fresh eyes: any unfinished stub, contradiction, scope creep, or requirement that reads two ways? Fix inline.
 - Ask your human partner to review the written spec. Wait. If they want changes, make them and re-review.
 - Then invoke **writing-spec** to add the Tasks and End-to-end verification layers. Do not invoke any other skill.
+
+## Committing the spec
+
+Before committing the spec, check whether this repo tracks specs: run `git ls-files docs/specs`.
+
+- **It lists files** - the repo commits specs as usual; commit this one the same way.
+- **It is empty** - no `docs/specs` folder yet, or a folder whose contents are untracked or gitignored (never added). Do not commit silently. Ask your human partner: commit the spec, or keep it local? On yes, commit it - use `git add -f` if the path is gitignored. On no, leave the spec untracked, continue the workflow, and do not commit it.
 
 ## Principles
 
