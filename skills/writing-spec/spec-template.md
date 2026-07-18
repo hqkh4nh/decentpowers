@@ -24,7 +24,7 @@ acceptance: [AC-1, AC-2, AC-3]   # pointers only - not a second copy
 <intent, constraints, technical decisions; name files/interfaces inline>
 - **Global constraints:** <version floors, naming/copy, magic values - verbatim>
 
-## Tasks                         # unit of review AND unit of subagent split
+## Tasks                         # unit of review; group by AC - commit boundary is per AC
 - [ ] **T1** [M] <title> - files: `src/x.ts` - Verifies: AC-1 - Verify: `npm test x`
 - [ ] **T2** [S][P] <title> - files: `src/y.ts` - Verifies: AC-2 - Verify: `npm run build`
 - [ ] **T3** [L] <title> - files: `src/z.ts` (depends on T1) - Verifies: AC-3 - Verify: `npm test z`

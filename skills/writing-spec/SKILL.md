@@ -45,10 +45,12 @@ A task is the smallest unit worth a fresh reviewer's gate and its own verify. No
 - **`[P]`** - parallel-safe: touches different files, no dependency.
 - **`depends on`** - ordering when it exists.
 - **files** - the boundary; what this task may touch.
-- **Verifies: AC-n** - inline traceability. Every AC must be verified by at least one task.
+- **Verifies: AC-n** - inline traceability. Every AC must be verified by at least one task. Group or order tasks by the AC they serve: the commit boundary in `implementing` is one commit per AC, so that grouping must be visible here.
 - **Verify: <command>** - the deterministic check that proves this task.
 
 Fold setup, config, and docs into the task whose deliverable needs them. Split only where a reviewer could reject one task while approving its neighbor.
+
+**AC altitude sets the commit count.** An AC is a user-visible behavior, not a micro-step - aim for roughly 3-6 per feature. Because `implementing` commits once per AC, chopping ACs too fine makes commits re-explode; keeping them at behavior altitude keeps history to a handful of atomic commits.
 
 ## Global constraints
 
